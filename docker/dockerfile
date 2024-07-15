@@ -1,0 +1,23 @@
+FROM public.ecr.aws/lambda/python:3.11
+
+# Copy requirements.txt
+COPY requirements.txt ${LAMBDA_TASK_ROOT}
+
+# Install the specified packages
+RUN pip install -r requirements.txt
+
+# Download the 'punkt' tokenizer models-alredy installed(/boilernet/nltk_data)
+#RUN python -c "import nltk; nltk.download('punkt')"
+
+# HuggingFace cache=writable
+ENV HF_HOME=/tmp/HuggingFace
+
+# Disable GPU for Transformers
+ENV CUDA_VISIBLE_DEVICES=-1
+
+# Copy function code
+COPY lambda_function.py ${LAMBDA_TASK_ROOT}
+COPY boilernet/ ${LAMBDA_TASK_ROOT}/boilernet/
+COPY tmp/ /tmp/
+# Set the CMD to your handler (could also be done as a parameter override outside of the Dockerfile)
+CMD [ "lambda_function.handler" ]

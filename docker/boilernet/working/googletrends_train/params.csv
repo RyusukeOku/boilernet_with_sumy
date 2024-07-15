@@ -1,0 +1,9 @@
+DATA_DIR,boilernet/preprocessed/googletrends_data
+num_layers,2
+hidden_units,256
+dropout,0.5
+dense_size,256
+epochs,50
+batch_size,16
+interval,1
+working_dir,boilernet/working/googletrends_train
