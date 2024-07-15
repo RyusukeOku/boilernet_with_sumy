@@ -6,7 +6,6 @@ numpy
 scikit-learn
 tensorflow
 tqdm
-#scipy==1.4.1 #tensorflow2.1.0の仕様でscipyのバージョンを指定しないとバグる
 scipy
 transformers
 fugashi
