@@ -1,7 +1,7 @@
 # Boilernet-with-Sumy
 
 ## 概要
-Boilernet-with-Sumyは、指定されたURLから英語のWebページのテキストデータを取得し、その内容を5文に要約するツールです。このツールはAWS Lambda上で動作し、Dockerイメージとしてデプロイされます。このツールはLLMを活用したサービス比較チャットボット(https://github.com/Okapi-dog/LLM-chatbot)にてスマートフォンのレビューの要約に使用されています。
+Boilernet-with-Sumyは、指定されたURLから英語のWebページのテキストデータを取得し、その内容を5文に要約するツールです。このツールはAWS Lambda上で動作し、Dockerイメージとしてデプロイされます。このツールはLLMを活用したサービス比較チャットボット(https://github.com/Okapi-dog/LLM-chatbot) にてスマートフォンのレビューの要約に使用されています。
 
 ## 使用技術
 このプロジェクトでは以下の技術とライブラリを使用しています：
